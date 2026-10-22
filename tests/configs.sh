@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Checks that the kitty, herdr and pi configs parse, and that the pi theme matches pi's theme schema.
+set -euo pipefail
+
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+
+python3 -c 'import sys, tomllib; tomllib.load(open(sys.argv[1], "rb"))' "$repo/herdr/config.toml"
+echo "herdr: config.toml parses"
+
+curl -fsSL https://pi.dev/schemas/theme.schema.json -o "$tmp/theme.schema.json"
+uvx --quiet check-jsonschema --schemafile "$tmp/theme.schema.json" "$repo/pi/themes/claude.json"
+echo "pi: theme matches pi's theme schema"
+
+if command -v kitty >/dev/null; then
+  # kitty reports unknown options as warnings and bad values as errors; treat both as failures
+  out=$(kitty +runpy 'from kitty.config import load_config; import sys; load_config(sys.argv[-1])' "$repo/kitty/kitty.conf" 2>&1)
+  [ -z "$out" ] || { echo "$out" >&2; exit 1; }
+  echo "kitty: kitty.conf loads cleanly"
+else
+  echo "kitty: not installed, skipped"
+fi

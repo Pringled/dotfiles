@@ -1,0 +1,17 @@
+onboarding = false
+[ui]
+agent_panel_sort = "spaces"
+
+show_agent_labels_on_pane_borders = false
+status_indicators = "symbols"
+[ui.sound]
+enabled = false
+
+[theme.custom]
+# Let the Kitty background gradient show through the tab row and sidebar
+panel_bg = "reset"
+# Brighter inactive tab labels on cooler blocks; overlay0/1 also tint dim sidebar text
+overlay1 = "#aab2c0"
+overlay0 = "#8a92a2"
+surface0 = "#2a3242"
+active_row_bg = "#2a3242"
