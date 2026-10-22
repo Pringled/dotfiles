@@ -1,0 +1,25 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g tree-sitter-cli
+      - run: shellcheck install.sh tests/*.sh
+      - run: tests/install.sh
+      - run: tests/configs.sh
+      - run: tests/nvim.sh
