@@ -3,8 +3,9 @@ cask "kitty"
 cask "font-jetbrains-mono"
 brew "herdr"
 
-# Editor; the Neovim config also needs ripgrep, Node.js and the tree-sitter CLI
+# Editors; the Neovim config also needs ripgrep, Node.js and the tree-sitter CLI
 brew "neovim"
+cask "zed"
 brew "ripgrep"
 brew "node"
 brew "tree-sitter-cli"
