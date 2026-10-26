@@ -16,9 +16,28 @@ My macOS setup for coding with agents.
 | zsh | Shell: history search with [atuin](https://atuin.sh), `cd` to visited folders with [zoxide](https://github.com/ajeetdsouza/zoxide), `ls` with [eza](https://eza.rocks), `cat` with [bat](https://github.com/sharkdp/bat), and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), [`atuin/`](atuin) |
 | git | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/delta.gitconfig`](git/delta.gitconfig) |
 | [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key | |
-| [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+alt+l` keeps me in the current app | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
+| [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
 
 Everything is installed from the [`Brewfile`](Brewfile). My own Pi packages live in [pi-extensions](https://github.com/Pringled/pi-extensions).
+
+<details>
+<summary>Shortcuts</summary>
+
+| Where | Keys | What it does |
+|---|---|---|
+| Handy | `option+space` | Dictate: hold to talk, or tap to start and stop |
+| | `option+shift+space` | Dictate with post-processing |
+| | `esc` | Cancel |
+| Hammerspoon | `ctrl+option+l` | Lock or unlock focus on the current app |
+| zsh | `ctrl+r`, `↑` | Search shell history (atuin) |
+| | `cd <part of a name>` | Jump to a folder you've visited (zoxide) |
+| | `ll`, `lt` | Long list with git status, newest last |
+| | `n`, `v` | Open Neovim, activate `./.venv` |
+| Neovim | | See [`nvim/README.md`](nvim/README.md) |
+
+kitty and herdr use their default keys.
+
+</details>
 
 ## Install
 
