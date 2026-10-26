@@ -11,7 +11,7 @@ My macOS setup for coding with agents.
 | [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal. JetBrains Mono, Ayu Mirage colors and a gradient background | [`kitty/`](kitty) |
 | [herdr](https://herdr.dev) | Running several agents side by side in panes and tabs | [`herdr/`](herdr) |
 | [Neovim](https://neovim.io) | Terminal editor for Python: LSP, Ruff on save, pytest from the editor, fuzzy finding | [`nvim/`](nvim), plugins and key mappings in [`nvim/README.md`](nvim/README.md) |
-| [Zed](https://zed.dev) | IDE, in vim mode, with Ruff on save and Copilot suggestions | [`zed/settings.json`](zed/settings.json) |
+| [Zed](https://zed.dev) | IDE, in vim mode, with the same Dark+ colors as Neovim, Ruff on save and Copilot suggestions | [`zed/`](zed) |
 | [Pi](https://pi.dev) | Coding agent, with the packages I use | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json) |
 | zsh | Shell: history search with [atuin](https://atuin.sh), `cd` to visited folders with [zoxide](https://github.com/ajeetdsouza/zoxide), `ls` with [eza](https://eza.rocks), `cat` with [bat](https://github.com/sharkdp/bat), and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), [`atuin/`](atuin) |
 | git | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/delta.gitconfig`](git/delta.gitconfig) |

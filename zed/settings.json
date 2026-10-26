@@ -22,12 +22,12 @@
   },
   "theme": {
     "mode": "dark",
-    "light": "Smooth Light",
-    "dark": "GitHub Dark Dimmed"
+    "light": "VSCode Light+",
+    "dark": "VScode Dark Plus"
   },
   "auto_install_extensions": {
-    "github-theme": true,
-    "smooth": true,
+    "vscode-dark-plus": true,
+    "vscode-light-plus": true,
     "html": true,
     "toml": true,
     "make": true,
@@ -80,6 +80,12 @@
         "source.organizeImports": true,
         "source.fixAll.ruff": true
       }
+    },
+    "Plain Text": {
+      "show_edit_predictions": false
+    },
+    "Git Commit": {
+      "show_edit_predictions": false
     }
   },
   "lsp": {

@@ -15,7 +15,8 @@ echo "git: delta.gitconfig parses"
 ruby -c "$repo/Brewfile" >/dev/null
 echo "brew: Brewfile parses"
 python3 -m json.tool "$repo/zed/settings.json" >/dev/null
-echo "zed: settings.json parses"
+python3 -m json.tool "$repo/zed/keymap.json" >/dev/null
+echo "zed: settings.json and keymap.json parse"
 
 if command -v zsh >/dev/null; then
   zsh -n "$repo/zsh/shell.zsh"
