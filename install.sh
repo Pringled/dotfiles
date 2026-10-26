@@ -45,6 +45,7 @@ link zsh/shell.zsh "$HOME/.config/zsh/shell.zsh"
 link atuin/config.toml "$HOME/.config/atuin/config.toml"
 link hammerspoon/init.lua "$HOME/.hammerspoon/init.lua"
 link zed/settings.json "$HOME/.config/zed/settings.json"
+link zed/keymap.json "$HOME/.config/zed/keymap.json"
 
 # delta's settings are included from ~/.gitconfig, so the rest of your git config stays yours
 if git config --global --get-all include.path | grep -qxF "$repo/git/delta.gitconfig"; then

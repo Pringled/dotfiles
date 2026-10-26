@@ -3,7 +3,7 @@
 set -euo pipefail
 
 repo="$(cd "$(dirname "$0")/.." && pwd)"
-targets=(.config/kitty/kitty.conf .config/kitty/theme.conf .config/kitty/bg.png .config/herdr/config.toml .config/nvim .pi/agent/themes/claude.json .config/zsh/shell.zsh .config/atuin/config.toml .hammerspoon/init.lua .config/zed/settings.json)
+targets=(.config/kitty/kitty.conf .config/kitty/theme.conf .config/kitty/bg.png .config/herdr/config.toml .config/nvim .pi/agent/themes/claude.json .config/zsh/shell.zsh .config/atuin/config.toml .hammerspoon/init.lua .config/zed/settings.json .config/zed/keymap.json)
 
 fail() { echo "FAIL: $*" >&2; exit 1; }
 check_links() {
