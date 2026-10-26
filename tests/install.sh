@@ -17,16 +17,16 @@ home=$(mktemp -d)
 trap 'rm -rf "$home"' EXIT
 
 # A dry run changes nothing
-HOME="$home" "$repo/install.sh" --dry-run --no-brew >/dev/null
+HOME="$home" "$repo/install.sh" --dry-run >/dev/null
 [ -z "$(ls -A "$home")" ] || fail "dry run created files"
 
 # A fresh home gets every link
-HOME="$home" "$repo/install.sh" --no-brew >/dev/null
+HOME="$home" "$repo/install.sh" --no-install >/dev/null
 check_links "$home"
 git config --file "$home/.gitconfig" --get-all include.path | grep -q "git/delta.gitconfig" || fail "delta settings not included in .gitconfig"
 
 # Running again changes nothing
-out=$(HOME="$home" "$repo/install.sh" --no-brew)
+out=$(HOME="$home" "$repo/install.sh" --no-install)
 [ "$(grep -c '^ok' <<<"$out")" = "$((${#targets[@]} + 1))" ] || fail "second run was not a no-op"
 [ "$(git config --file "$home/.gitconfig" --get-all include.path | grep -c delta)" = 1 ] || fail "delta was included twice"
 
@@ -34,7 +34,7 @@ out=$(HOME="$home" "$repo/install.sh" --no-brew)
 rm -rf "$home" && mkdir -p "$home/.config/kitty" "$home/.config/nvim"
 echo "mine" > "$home/.config/kitty/kitty.conf"
 echo "mine" > "$home/.config/nvim/init.lua"
-HOME="$home" "$repo/install.sh" --no-brew >/dev/null
+HOME="$home" "$repo/install.sh" --no-install >/dev/null
 check_links "$home"
 grep -q mine "$home"/.config/kitty/kitty.conf.backup-* || fail "kitty.conf was not backed up"
 grep -q mine "$home"/.config/nvim.backup-*/init.lua || fail "nvim config was not backed up"
