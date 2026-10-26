@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs the plugins pinned in nvim/lazy-lock.json into throwaway folders, then starts Neovim and fails on any error.
+# Installs the plugins pinned in nvim/lazy-lock.json and the syntax parsers into throwaway folders, then starts Neovim and fails on any error.
 set -euo pipefail
 
 repo="$(cd "$(dirname "$0")/.." && pwd)"
@@ -10,6 +10,8 @@ cp -R "$repo/nvim" "$tmp/config/nvim"
 export XDG_CONFIG_HOME="$tmp/config" XDG_DATA_HOME="$tmp/data" XDG_STATE_HOME="$tmp/state" XDG_CACHE_HOME="$tmp/cache"
 
 nvim --headless "+Lazy! restore" +qa
+# Parsers otherwise compile in the background at startup, and the check below would see their errors halfway
+nvim --headless "+lua local languages = dofile(vim.fn.stdpath('config') .. '/lua/plugins/treesitter.lua').opts.languages; if not require('nvim-treesitter').install(languages):wait(300000) then vim.cmd('cquit 1') end" +qa
 
 printf 'def greet(name):\n    return f"hi {name}"\n' > "$tmp/example.py"
 nvim --headless "$tmp/example.py" \
