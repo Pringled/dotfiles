@@ -1,0 +1,5 @@
+# Enter runs the selected command instead of putting it in the prompt to edit first
+enter_accept = true
+
+[sync]
+records = true
