@@ -1,0 +1,108 @@
+{
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 15,
+  "ui_font_size": 16,
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+          "venv",
+          ".env",
+          "env"
+        ],
+        "activate_script": "default"
+      }
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Smooth Light",
+    "dark": "GitHub Dark Dimmed"
+  },
+  "auto_install_extensions": {
+    "github-theme": true,
+    "smooth": true,
+    "html": true,
+    "toml": true,
+    "make": true,
+    "markdown-oxide": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent": {
+    "enabled": false,
+    "button": false
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+    "mode": "eager"
+  },
+  "context_servers": {
+    "semble": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "semble[mcp]",
+        "semble"
+      ]
+    }
+  },
+  "format_on_save": "on",
+  "languages": {
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "uv",
+          "arguments": [
+            "run",
+            "ruff",
+            "format",
+            "-"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.ruff": true
+      }
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "analysis": {
+            "typeCheckingMode": "off",
+            "diagnosticMode": "openFilesOnly",
+            "useLibraryCodeForTypes": false,
+            "diagnosticSeverityOverrides": {
+              "reportAny": "none",
+              "reportExplicitAny": "none",
+              "reportMissingTypeStubs": "none",
+              "reportUnknownArgumentType": "none",
+              "reportUnknownLambdaType": "none",
+              "reportUnknownMemberType": "none",
+              "reportUnknownParameterType": "none",
+              "reportUnknownVariableType": "none"
+            }
+          }
+        }
+      }
+    }
+  }
+}

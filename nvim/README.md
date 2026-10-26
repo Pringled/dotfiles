@@ -1,6 +1,6 @@
 # Neovim
 
-Neovim 0.12 config for terminal-heavy work and Python, with pi in a side panel.
+Neovim 0.12 config for terminal-heavy work and Python.
 
 Requires Neovim 0.12+, Git, Make, ripgrep, Node.js and the tree-sitter CLI, which builds the syntax parsers (`brew install neovim ripgrep node tree-sitter-cli`). `../install.sh` links this folder to `~/.config/nvim`. On the first launch lazy.nvim installs the plugins pinned in `lazy-lock.json`, and Mason installs the language servers in the background; `:checkhealth` confirms everything once it's done. Update plugins with `:Lazy update` and roll back with `:Lazy restore`.
 
