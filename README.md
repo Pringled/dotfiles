@@ -15,6 +15,7 @@ My macOS setup for coding with agents.
 | [Pi](https://pi.dev) | Coding agent, with the packages I use | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json) |
 | zsh | Shell: history search with [atuin](https://atuin.sh), `cd` to visited folders with [zoxide](https://github.com/ajeetdsouza/zoxide), `ls` with [eza](https://eza.rocks), `cat` with [bat](https://github.com/sharkdp/bat), and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), [`atuin/`](atuin) |
 | git | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/delta.gitconfig`](git/delta.gitconfig) |
+| [Obsidian](https://obsidian.md) | Second brain: one Markdown vault, synced through iCloud, with a folder of notes per project. My agents read and update it through a `brain` skill, so plans, decisions and handovers carry over from one session to the next | |
 | [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key | |
 | [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
 
