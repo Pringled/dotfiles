@@ -6,16 +6,33 @@ My macOS setup for coding with agents.
 
 ## What's in it
 
+### Agents
+
 | Tool | What I use it for | Config |
 |---|---|---|
-| [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal. JetBrains Mono, Ayu Mirage colors and a gradient background | [`kitty/`](kitty) |
+| [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal, with JetBrains Mono and Ayu Mirage colors | [`kitty/`](kitty) |
 | [herdr](https://herdr.dev) | Running several agents side by side in panes and tabs | [`herdr/`](herdr) |
-| [Neovim](https://neovim.io) | Terminal editor for Python: LSP, Ruff on save, pytest from the editor, fuzzy finding | [`nvim/`](nvim), plugins and key mappings in [`nvim/README.md`](nvim/README.md) |
-| [Zed](https://zed.dev) | IDE, in vim mode, with the same Dark+ colors as Neovim, Ruff on save and Copilot suggestions | [`zed/`](zed) |
 | [Pi](https://pi.dev) | Coding agent, with the packages I use | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json) |
-| zsh | Shell: history search with [atuin](https://atuin.sh), `cd` to visited folders with [zoxide](https://github.com/ajeetdsouza/zoxide), `ls` with [eza](https://eza.rocks), `cat` with [bat](https://github.com/sharkdp/bat), and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), [`atuin/`](atuin) |
+
+### Editing
+
+| Tool | What I use it for | Config |
+|---|---|---|
+| [Neovim](https://neovim.io) | Python editing: LSP, Ruff on save, pytest | [`nvim/`](nvim), plugins and key mappings in [`nvim/README.md`](nvim/README.md) |
+| [Zed](https://zed.dev) | IDE in vim mode, with the same colors as Neovim | [`zed/`](zed) |
+
+### Shell
+
+| Tool | What I use it for | Config |
+|---|---|---|
+| zsh | History search, jumping to visited folders, and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), with [atuin](https://atuin.sh) ([`atuin/`](atuin)), [zoxide](https://github.com/ajeetdsouza/zoxide), [eza](https://eza.rocks) and [bat](https://github.com/sharkdp/bat) |
 | git | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/delta.gitconfig`](git/delta.gitconfig) |
-| [Obsidian](https://obsidian.md) | Second brain: one Markdown vault, synced through iCloud, with a folder of notes per project. My agents read and update it through a `brain` skill, so plans, decisions and handovers carry over from one session to the next | |
+
+### Around it
+
+| Tool | What I use it for | Config |
+|---|---|---|
+| [Obsidian](https://obsidian.md) | Second brain that my agents read and update through a `brain` skill | |
 | [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key | |
 | [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
 
