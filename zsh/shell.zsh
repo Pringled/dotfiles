@@ -1,5 +1,8 @@
 # Shell setup to source from ~/.zshrc. install.sh links it to ~/.config/zsh/shell.zsh.
 
+# Tab completion, which zoxide's `cd name <tab>` needs too
+autoload -Uz compinit && compinit
+
 # History search on ctrl+r and the up arrow
 command -v atuin >/dev/null && eval "$(atuin init zsh)"
 # cd jumps to a matching folder you've visited before, such as `cd dotfiles`
