@@ -1,6 +1,6 @@
 {
   "base_keymap": "VSCode",
-  "vim_mode": true,
+  "vim_mode": false,
   "relative_line_numbers": "enabled",
   "buffer_font_family": "JetBrains Mono",
   "buffer_font_size": 15,
@@ -33,6 +33,21 @@
   },
   "theme_overrides": {
     "VScode Dark Plus": {
+      "background": "#1f2430",
+      "editor.background": "#1f2430",
+      "editor.gutter.background": "#1f2430",
+      "editor.active_line.background": "#272d3b",
+      "terminal.background": "#1f2430",
+      "panel.background": "#1f2430",
+      "surface.background": "#232834",
+      "elevated_surface.background": "#232834",
+      "title_bar.background": "#1a1f29",
+      "title_bar.inactive_background": "#1a1f29",
+      "status_bar.background": "#1a1f29",
+      "toolbar.background": "#1f2430",
+      "tab_bar.background": "#1a1f29",
+      "tab.active_background": "#1f2430",
+      "tab.inactive_background": "#1a1f29",
       "syntax": {
         "title": {
           "color": "#569cd6",
@@ -49,6 +64,24 @@
         },
         "emphasis.strong": {
           "font_weight": 700
+        },
+        "comment": {
+          "color": "#8b95a8"
+        },
+        "comment.doc": {
+          "color": "#8b95a8"
+        },
+        "punctuation": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.delimiter": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.bracket": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.special": {
+          "color": "#9aa3b5"
         }
       }
     }
