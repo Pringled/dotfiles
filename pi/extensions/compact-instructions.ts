@@ -13,12 +13,9 @@ The user's instructions, preferences and corrections, close to their own words.
 What was being done at the end, what is verified, and the exact next step.
 Keep exact names, paths, numbers, commands and error messages.`;
 
-// pi-vcc's /pi-vcc marks its own compactions with this instruction and writes their summary itself
-const PI_VCC = "__pi_vcc__";
-
 export default function (pi: ExtensionAPI) {
 	pi.on("session_before_compact", async (event, ctx) => {
-		if (!ctx.model || event.customInstructions?.includes(PI_VCC)) return;
+		if (!ctx.model) return;
 		// Anything that goes wrong leaves the compaction to Pi, as if this extension weren't there
 		try {
 			const auth = await ctx.modelRegistry.getApiKeyAndHeaders(ctx.model);
