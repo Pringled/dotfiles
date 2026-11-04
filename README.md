@@ -12,7 +12,7 @@ My macOS setup for coding with agents.
 |---|---|---|
 | [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal, with JetBrains Mono and Ayu Mirage colors | [`kitty/`](kitty) |
 | [herdr](https://herdr.dev) | Running several agents side by side in panes and tabs | [`herdr/`](herdr) |
-| [Pi](https://pi.dev) | Coding agent, with the packages I use and fuller compaction summaries | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json), compaction in [`pi/extensions/compact-instructions.ts`](pi/extensions/compact-instructions.ts) |
+| [Pi](https://pi.dev) | Coding agent, with the packages I use and fuller compaction summaries | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json), compaction in [`pi/extensions/compact-instructions.ts`](pi/extensions/compact-instructions.ts), a shorter todo panel in [`pi/rpiv-todo/config.json`](pi/rpiv-todo/config.json) |
 
 ### Editing
 
