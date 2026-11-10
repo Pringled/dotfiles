@@ -1,8 +1,8 @@
-# dotfiles
-
-![kitty with herdr, Pi and Neovim](https://raw.githubusercontent.com/Pringled/dotfiles/main/assets/setup.png)
+# Thomas's dotfiles
 
 My macOS setup for coding with agents.
+
+![kitty with herdr, Pi and Neovim](https://raw.githubusercontent.com/Pringled/dotfiles/main/assets/setup.png)
 
 ## What's in it
 
