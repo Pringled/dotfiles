@@ -6,7 +6,7 @@ My macOS setup for coding with agents.
 
 ## What's in it
 
-### Agents
+### Terminal and agents
 
 | Tool                                      | What I use it for                                                               | Config            |
 | ----------------------------------------- | ------------------------------------------------------------------------------- | ----------------- |
@@ -33,28 +33,26 @@ My macOS setup for coding with agents.
 
 ### Around it
 
-| Tool                                       | What I use it for                                                   | Config                                         |
-| ------------------------------------------ | ------------------------------------------------------------------- | ---------------------------------------------- |
-| [Obsidian](https://obsidian.md)            | Second brain that my agents read and update through a `brain` skill |                                                |
-| [Handy](https://handy.computer)            | Dictating prompts with a push-to-talk key                           |                                                |
-| [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app             | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
+| Tool                            | What I use it for                                                   | Config |
+| ------------------------------- | ------------------------------------------------------------------- | ------ |
+| [Obsidian](https://obsidian.md) | Second brain that my agents read and update through a `brain` skill |        |
+| [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key                           |        |
 
 Everything is installed from the [`Brewfile`](Brewfile). My own Pi packages live in [pi-extensions](https://github.com/Pringled/pi-extensions).
 
 <details>
 <summary>Shortcuts</summary>
 
-| Where       | Keys                  | What it does                                    |
-| ----------- | --------------------- | ----------------------------------------------- |
-| Handy       | `option+space`        | Dictate: hold to talk, or tap to start and stop |
-|             | `option+shift+space`  | Dictate with post-processing                    |
-|             | `esc`                 | Cancel                                          |
-| Hammerspoon | `ctrl+option+l`       | Lock or unlock focus on the current app         |
-| zsh         | `ctrl+r`, `↑`         | Search shell history (atuin)                    |
-|             | `cd <part of a name>` | Jump to a folder you've visited (zoxide)        |
-|             | `ll`, `lt`            | Long list with git status, newest last          |
-|             | `n`, `v`              | Open Neovim, activate `./.venv`                 |
-| Neovim      |                       | See [`nvim/README.md`](nvim/README.md)          |
+| Where  | Keys                  | What it does                                    |
+| ------ | --------------------- | ----------------------------------------------- |
+| Handy  | `option+space`        | Dictate: hold to talk, or tap to start and stop |
+|        | `option+shift+space`  | Dictate with post-processing                    |
+|        | `esc`                 | Cancel                                          |
+| zsh    | `ctrl+r`, `↑`         | Search shell history (atuin)                    |
+|        | `cd <part of a name>` | Jump to a folder you've visited (zoxide)        |
+|        | `ll`, `lt`            | Long list with git status, newest last          |
+|        | `n`, `v`              | Open Neovim, activate `./.venv`                 |
+| Neovim |                       | See [`nvim/README.md`](nvim/README.md)          |
 
 kitty and herdr use their default keys.
 

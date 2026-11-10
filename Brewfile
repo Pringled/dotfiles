@@ -25,5 +25,4 @@ brew "gh"         # GitHub CLI
 
 # Apps
 cask "handy"        # push-to-talk dictation
-cask "hammerspoon"  # focus lock, see hammerspoon/init.lua
 cask "obsidian"     # second brain, see the README
