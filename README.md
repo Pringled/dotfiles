@@ -81,10 +81,6 @@ source ~/.config/zsh/shell.zsh
 
 `git pull`, then `./install.sh` for any new tools or packages.
 
-## Tests
-
-`tests/install.sh` runs the installer in throwaway home folders, `tests/configs.sh` checks that the configs parse, and `tests/nvim.sh` installs the pinned Neovim plugins and starts Neovim. CI runs them on every pull request.
-
 ## Author
 
 Thomas van Dongen
