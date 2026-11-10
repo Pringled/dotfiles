@@ -8,50 +8,53 @@ My macOS setup for coding with agents.
 
 ### Agents
 
-| Tool | What I use it for | Config |
-|---|---|---|
-| [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal, with JetBrains Mono and Ayu Mirage colors | [`kitty/`](kitty) |
-| [herdr](https://herdr.dev) | Running several agents side by side in panes and tabs | [`herdr/`](herdr) |
-| [Pi](https://pi.dev) | Coding agent, with the packages I use and fuller compaction summaries | [`pi/packages.txt`](pi/packages.txt), theme in [`pi/themes/claude.json`](pi/themes/claude.json), compaction in [`pi/extensions/compact-instructions.ts`](pi/extensions/compact-instructions.ts), a shorter todo panel in [`pi/rpiv-todo/config.json`](pi/rpiv-todo/config.json) |
+| Tool                                      | What I use it for                                                               | Config            |
+| ----------------------------------------- | ------------------------------------------------------------------------------- | ----------------- |
+| [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal emulator, with some customizations                                     | [`kitty/`](kitty) |
+| [herdr](https://herdr.dev)                | Terminal multiplexer, for running several agents side by side in panes and tabs | [`herdr/`](herdr) |
+| [Pi](https://pi.dev)                      | Coding agent, with the extensions I use                                         | [`pi/`](pi)       |
 
 ### Editing
 
-| Tool | What I use it for | Config |
-|---|---|---|
-| [Neovim](https://neovim.io) | Python editing: LSP, Ruff on save, pytest | [`nvim/`](nvim), plugins and key mappings in [`nvim/README.md`](nvim/README.md) |
-| [Zed](https://zed.dev) | IDE in vim mode, with the same colors as Neovim | [`zed/`](zed) |
+| Tool                        | What I use it for                                             | Config          |
+| --------------------------- | ------------------------------------------------------------- | --------------- |
+| [Neovim](https://neovim.io) | Quick edits directly in my terminal so I don't have to switch | [`nvim/`](nvim) |
+| [Zed](https://zed.dev)      | IDE for longer coding sessions and manual edits               | [`zed/`](zed)   |
 
 ### Shell
 
-| Tool | What I use it for | Config |
-|---|---|---|
-| zsh | History search, jumping to visited folders, and a project's `.venv` activated on `cd` | [`zsh/shell.zsh`](zsh/shell.zsh), with [atuin](https://atuin.sh) ([`atuin/`](atuin)), [zoxide](https://github.com/ajeetdsouza/zoxide), [eza](https://eza.rocks) and [bat](https://github.com/sharkdp/bat) |
-| git | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/delta.gitconfig`](git/delta.gitconfig) |
+| Tool                                                            | What I use it for                                                    | Config            |
+| --------------------------------------------------------------- | -------------------------------------------------------------------- | ----------------- |
+| zsh                                                             | Shell, with aliases and a project's `.venv` activated on `cd`        | [`zsh/`](zsh)     |
+| [atuin](https://atuin.sh)                                       | Shell history search                                                 | [`atuin/`](atuin) |
+| [zoxide](https://github.com/ajeetdsouza/zoxide)                 | Jumping to folders I've visited                                      |                   |
+| [eza](https://eza.rocks), [bat](https://github.com/sharkdp/bat) | Nicer `ls` and `cat`                                                 |                   |
+| git                                                             | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/`](git)     |
 
 ### Around it
 
-| Tool | What I use it for | Config |
-|---|---|---|
-| [Obsidian](https://obsidian.md) | Second brain that my agents read and update through a `brain` skill | |
-| [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key | |
-| [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
+| Tool                                       | What I use it for                                                   | Config                                         |
+| ------------------------------------------ | ------------------------------------------------------------------- | ---------------------------------------------- |
+| [Obsidian](https://obsidian.md)            | Second brain that my agents read and update through a `brain` skill |                                                |
+| [Handy](https://handy.computer)            | Dictating prompts with a push-to-talk key                           |                                                |
+| [Hammerspoon](https://www.hammerspoon.org) | Focus lock: `ctrl+option+l` keeps me in the current app             | [`hammerspoon/init.lua`](hammerspoon/init.lua) |
 
 Everything is installed from the [`Brewfile`](Brewfile). My own Pi packages live in [pi-extensions](https://github.com/Pringled/pi-extensions).
 
 <details>
 <summary>Shortcuts</summary>
 
-| Where | Keys | What it does |
-|---|---|---|
-| Handy | `option+space` | Dictate: hold to talk, or tap to start and stop |
-| | `option+shift+space` | Dictate with post-processing |
-| | `esc` | Cancel |
-| Hammerspoon | `ctrl+option+l` | Lock or unlock focus on the current app |
-| zsh | `ctrl+r`, `↑` | Search shell history (atuin) |
-| | `cd <part of a name>` | Jump to a folder you've visited (zoxide) |
-| | `ll`, `lt` | Long list with git status, newest last |
-| | `n`, `v` | Open Neovim, activate `./.venv` |
-| Neovim | | See [`nvim/README.md`](nvim/README.md) |
+| Where       | Keys                  | What it does                                    |
+| ----------- | --------------------- | ----------------------------------------------- |
+| Handy       | `option+space`        | Dictate: hold to talk, or tap to start and stop |
+|             | `option+shift+space`  | Dictate with post-processing                    |
+|             | `esc`                 | Cancel                                          |
+| Hammerspoon | `ctrl+option+l`       | Lock or unlock focus on the current app         |
+| zsh         | `ctrl+r`, `↑`         | Search shell history (atuin)                    |
+|             | `cd <part of a name>` | Jump to a folder you've visited (zoxide)        |
+|             | `ll`, `lt`            | Long list with git status, newest last          |
+|             | `n`, `v`              | Open Neovim, activate `./.venv`                 |
+| Neovim      |                       | See [`nvim/README.md`](nvim/README.md)          |
 
 kitty and herdr use their default keys.
 
