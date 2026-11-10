@@ -1,0 +1,20 @@
+# The Pi packages I use. install.sh installs any that are missing with `pi install`.
+
+# Mine, from https://github.com/Pringled/pi-extensions
+npm:pi-polish          # Claude Code-like look: folded tool calls and colored diffs
+npm:pi-background      # long commands run in the background
+npm:pi-model-pick      # model picker with favorites and recents
+npm:pi-context-bar     # context usage bar in the footer
+npm:pi-checkpoints     # undo Pi's file changes per turn
+npm:pi-feedback        # review the branch diff in the browser and send comments to Pi
+npm:pi-next-prompt     # suggests your next prompt
+npm:pi-away            # recap when you come back to a session
+npm:pi-heads-up        # flags things you might have missed after a task
+
+# Others'
+npm:pi-web-access              # web search, URL fetching and PDFs
+npm:@spences10/pi-themes       # theme pack
+npm:pi-hermes-memory@0.9.10    # memory across sessions and session search
+npm:@ff-labs/pi-fff            # fuzzy file and content search
+npm:@juicesharp/rpiv-todo      # todo list for the model
+npm:pi-btw                     # side conversations with /btw

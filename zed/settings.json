@@ -1,0 +1,190 @@
+{
+  "base_keymap": "VSCode",
+  "vim_mode": false,
+  "relative_line_numbers": "enabled",
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 15,
+  "ui_font_size": 16,
+  "buffer_line_height": "comfortable",
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+          "venv",
+          ".env",
+          "env"
+        ],
+        "activate_script": "default"
+      }
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "VSCode Light+",
+    "dark": "VScode Dark Plus"
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Light",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "theme_overrides": {
+    "VScode Dark Plus": {
+      "background": "#1f2430",
+      "editor.background": "#1f2430",
+      "editor.gutter.background": "#1f2430",
+      "editor.active_line.background": "#272d3b",
+      "terminal.background": "#1f2430",
+      "panel.background": "#1f2430",
+      "surface.background": "#232834",
+      "elevated_surface.background": "#232834",
+      "title_bar.background": "#1a1f29",
+      "title_bar.inactive_background": "#1a1f29",
+      "status_bar.background": "#1a1f29",
+      "toolbar.background": "#1f2430",
+      "tab_bar.background": "#1a1f29",
+      "tab.active_background": "#1f2430",
+      "tab.inactive_background": "#1a1f29",
+      "syntax": {
+        "title": {
+          "color": "#569cd6",
+          "font_weight": 700
+        },
+        "link_text": {
+          "color": "#4fc1ff"
+        },
+        "link_uri": {
+          "color": "#808080"
+        },
+        "emphasis": {
+          "font_style": "italic"
+        },
+        "emphasis.strong": {
+          "font_weight": 700
+        },
+        "comment": {
+          "color": "#8b95a8"
+        },
+        "comment.doc": {
+          "color": "#8b95a8"
+        },
+        "punctuation": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.delimiter": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.bracket": {
+          "color": "#9aa3b5"
+        },
+        "punctuation.special": {
+          "color": "#9aa3b5"
+        }
+      }
+    }
+  },
+  "auto_install_extensions": {
+    "vscode-dark-plus": true,
+    "vscode-light-plus": true,
+    "html": true,
+    "toml": true,
+    "make": true,
+    "markdown-oxide": true,
+    "colored-zed-icons-theme": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent": {
+    "enabled": false,
+    "button": false
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+    "mode": "eager"
+  },
+  "context_servers": {
+    "semble": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "semble[mcp]",
+        "semble"
+      ]
+    }
+  },
+  "format_on_save": "on",
+  "languages": {
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "uv",
+          "arguments": [
+            "run",
+            "ruff",
+            "format",
+            "-"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.ruff": true
+      }
+    },
+    "Plain Text": {
+      "show_edit_predictions": false
+    },
+    "Git Commit": {
+      "show_edit_predictions": false
+    },
+    "Markdown": {
+      "soft_wrap": "editor_width"
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "analysis": {
+            "typeCheckingMode": "off",
+            "diagnosticMode": "openFilesOnly",
+            "useLibraryCodeForTypes": false,
+            "diagnosticSeverityOverrides": {
+              "reportAny": "none",
+              "reportExplicitAny": "none",
+              "reportMissingTypeStubs": "none",
+              "reportUnknownArgumentType": "none",
+              "reportUnknownLambdaType": "none",
+              "reportUnknownMemberType": "none",
+              "reportUnknownParameterType": "none",
+              "reportUnknownVariableType": "none"
+            }
+          }
+        }
+      }
+    }
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "title_bar": {
+    "show_sign_in": false
+  }
+}

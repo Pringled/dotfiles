@@ -1,8 +1,62 @@
 # dotfiles
 
-My terminal and editor setup on macOS: [kitty](https://sw.kovidgoyal.net/kitty/), [herdr](https://herdr.dev), [Neovim](https://neovim.io) and a theme for the [pi](https://pi.dev) coding agent.
+![kitty with herdr, Pi and Neovim](https://raw.githubusercontent.com/Pringled/dotfiles/main/assets/setup.png)
 
-![kitty with herdr, pi and Neovim](https://raw.githubusercontent.com/Pringled/dotfiles/main/assets/setup.png)
+My macOS setup for coding with agents.
+
+## What's in it
+
+### Terminal and agents
+
+| Tool                                      | What I use it for                                                               | Config            |
+| ----------------------------------------- | ------------------------------------------------------------------------------- | ----------------- |
+| [kitty](https://sw.kovidgoyal.net/kitty/) | Terminal emulator, with some customizations                                     | [`kitty/`](kitty) |
+| [herdr](https://herdr.dev)                | Terminal multiplexer, for running several agents side by side in panes and tabs | [`herdr/`](herdr) |
+| [Pi](https://pi.dev)                      | Coding agent, with the extensions I use                                         | [`pi/`](pi)       |
+
+### Editing
+
+| Tool                        | What I use it for                                             | Config          |
+| --------------------------- | ------------------------------------------------------------- | --------------- |
+| [Neovim](https://neovim.io) | Quick edits directly in my terminal so I don't have to switch | [`nvim/`](nvim) |
+| [Zed](https://zed.dev)      | IDE for longer coding sessions and manual edits               | [`zed/`](zed)   |
+
+### Shell
+
+| Tool                                                            | What I use it for                                                    | Config            |
+| --------------------------------------------------------------- | -------------------------------------------------------------------- | ----------------- |
+| zsh                                                             | Shell, with aliases and a project's `.venv` activated on `cd`        | [`zsh/`](zsh)     |
+| [atuin](https://atuin.sh)                                       | Shell history search                                                 | [`atuin/`](atuin) |
+| [zoxide](https://github.com/ajeetdsouza/zoxide)                 | Jumping to folders I've visited                                      |                   |
+| [eza](https://eza.rocks), [bat](https://github.com/sharkdp/bat) | Nicer `ls` and `cat`                                                 |                   |
+| git                                                             | Side-by-side diffs with [delta](https://github.com/dandavison/delta) | [`git/`](git)     |
+
+### Around it
+
+| Tool                            | What I use it for                                                   | Config |
+| ------------------------------- | ------------------------------------------------------------------- | ------ |
+| [Obsidian](https://obsidian.md) | Second brain that my agents read and update through a `brain` skill |        |
+| [Handy](https://handy.computer) | Dictating prompts with a push-to-talk key                           |        |
+
+Everything is installed from the [`Brewfile`](Brewfile). My own Pi packages live in [pi-extensions](https://github.com/Pringled/pi-extensions).
+
+<details>
+<summary>Shortcuts</summary>
+
+| Where  | Keys                  | What it does                                    |
+| ------ | --------------------- | ----------------------------------------------- |
+| Handy  | `option+space`        | Dictate: hold to talk, or tap to start and stop |
+|        | `option+shift+space`  | Dictate with post-processing                    |
+|        | `esc`                 | Cancel                                          |
+| zsh    | `ctrl+r`, `↑`         | Search shell history (atuin)                    |
+|        | `cd <part of a name>` | Jump to a folder you've visited (zoxide)        |
+|        | `ll`, `lt`            | Long list with git status, newest last          |
+|        | `n`, `v`              | Open Neovim, activate `./.venv`                 |
+| Neovim |                       | See [`nvim/README.md`](nvim/README.md)          |
+
+kitty and herdr use their default keys.
+
+</details>
 
 ## Install
 
@@ -13,18 +67,17 @@ cd ~/Projects/dotfiles
 ./install.sh
 ```
 
-`install.sh` symlinks each config into place, so edits on either side show up in the repo. Anything already there is moved to `<name>.backup-<time>` first, and running it again changes nothing.
+Then add this line to `~/.zshrc`:
 
-## What's in it
+```zsh
+source ~/.config/zsh/shell.zsh
+```
 
-- **kitty** (`brew install --cask kitty`): JetBrains Mono, the Ayu Mirage colors, slanted tabs, no title bar, and a static gradient background (`bg.png`) instead of transparency, so the look doesn't depend on the window behind it.
-- **herdr** (`brew install herdr`): transparent panels so kitty's background shows through, and brighter tab labels.
-- **Neovim**: a Neovim 0.12 config for Python with pi in a side panel. See [`nvim/README.md`](nvim/README.md) for what's included and the key mappings.
-- **pi theme**: `claude`, warm Claude Code-like colors with VS Code Dark+ syntax colors that match the Neovim colorscheme. Pick it with `/settings` in pi, or set `"theme": "claude"` in `~/.pi/agent/settings.json`. My pi extensions live in [pi-extensions](https://github.com/Pringled/pi-extensions).
+`install.sh` links each config into place, so edits on either side show up in the repo, and moves anything already there to `<name>.backup-<time>`. It then installs what's missing from the Brewfile and `pi/packages.txt`; `--no-install` skips that. Running it again changes nothing.
 
-## Tests
+## Update
 
-`tests/install.sh` runs the installer against throwaway home folders, `tests/configs.sh` checks that the kitty, herdr and pi configs parse (and the pi theme against pi's schema), and `tests/nvim.sh` installs the pinned plugins and starts Neovim. CI runs all three on every pull request.
+`git pull`, then `./install.sh` for any new tools or packages.
 
 ## Author
 
